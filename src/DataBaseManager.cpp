@@ -41,8 +41,6 @@ void DatabaseManager::loadStudents(const string& filepath)
         if (!gpaStr.empty()) {
             gpa = stod(gpaStr); // Convert string to double
         }
-
-        // Polymorphism in action: Create the specific derived class based on the text file
         if (typeStr == "Regular") {
             studentRoster.push_back(new RegularStudent(id, name, "student@nu.edu.pk", gpa));
         }
